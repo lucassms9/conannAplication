@@ -1,0 +1,253 @@
+<div data-page="cliente-detalhe" class="page">
+	<!-- Begin: Navbar -->
+	<div class="navbar" style="">
+		<div class="navbar-inner">
+
+			<div class="left" style="" >
+				<a href="#" data-panel="right" class="link back">
+					<i class="icon icon-back">
+					</i>
+				</a>
+			</div>
+			<div class="center cliente-nome" >
+				CLIENTE NOME
+			</div>
+
+			<div class="right">
+				<a href="nova-fazenda.html" class="link">
+					<i class="fa fa-home"></i>
+				</a>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<div class="page-content">
+
+		<div class="content-block"> 
+
+	<form id = "novoCliente1" method="POST" class="list-block no-hairlines no-hairlines-between inputs-list">
+
+				<!-- <div class="list-block-title">Cliente prefere boleto:</div> -->
+				<ul>
+					
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">CPF / CNPJ</div>
+							<div class="item-input item-input-field disabled">
+								<input type="tel" id="ProprietarioCpf" class="mask-cpf-cnpj">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Nome / Razão Social</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioNome" maxlength="90" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Data de nascimento</div>
+							<div class="item-input item-input-field disabled">
+								<input  id="ProprietarioData_nascimento" type="tel" class="mask-data">
+							</div>
+						</div>
+					</div>
+				</li>
+			
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Endereço (Correspondência)</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioEndereco" maxlength="90" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Número</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioNumero" maxlength="5" type="tel" class="mask-numero">
+							</div>
+						</div>
+					</div>
+				</li><li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Bairro</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioBairro" maxlength="50"  type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Complemento</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioComplemento" maxlength="15" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Município</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioCidade" maxlength="50" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Estado</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioEstado" type="text" maxlength="2" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">CEP</div>
+							<div class="item-input item-input-field disabled">
+								<input id = "ProprietarioCEP" type="tel" class="mask-cep">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Telefone</div>
+							<div class="item-input item-input-field disabled">
+								<input id = "ProprietarioTelefone" maxlength="20" name="telefone" type="tel" class="mask-telefone">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Celular</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioCelular" maxlength="20"  type="tel" class="mask-telefone-celular">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">E-mail financeiro</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioEmailFinan" maxlength="120" type="email" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<div class="content-block-title">Cliente prefere boleto:</div>
+							<li>
+								<label class="label-radio item-content">
+									<input type="radio" name="radio" id="boletoEmail" value="email">
+									<span class="item-media">
+										<i class="icon icon-form-radio"></i>
+									</span>
+									<span class="item-inner">
+										<span class="item-title">Por e-mail</span>
+									</span>
+								</label>
+							</li>
+							<li>
+								<label class="label-radio item-content">
+									<input type="radio" name="radio" id="boletoCarga" value="comcarga">
+									<span class="item-media">
+										<i class="icon icon-form-radio"></i>
+									</span>
+									<span class="item-inner">
+										<span class="item-title">Com a carga</span>
+									</span>
+								</label>
+							</li>
+
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Email para aprovação de pedidos</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioEmail" maxlength="120" type="email" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Nome contato</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioNomeContato" maxlength="120" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Apelido</div>
+							<div class="item-input item-input-field disabled">
+								<input id="ProprietarioApelido" maxlength="120" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+
+
+  			
+			 <div style="     padding-left: 15px;   font-size: 19px;" class="">Lista de Fazendas</div>
+			 <hr>
+			<div class="list-block indexed-list-block list-block-search searchbar-found">
+				<div class="list-group">
+					<ul id="fazendaList" data-virtual-list="true">
+					</ul>
+				</div>
+			</div>
+
+
+		<div class="row center">
+			<div class="col-50">
+				<a  data-forceUrl="true" class="button back button-fill button-raised color-green">Voltar</a>
+			</div>
+			<div class="col-50">
+				<input id="buttonProximo1" style="width: 100%;" class="button button-fill button-raise color-green" value="Próximo"> 
+			</div>
+		</div>
+		</form>
+
+
+
+	</div>
+</div>
+</div>
+
+
+</div>

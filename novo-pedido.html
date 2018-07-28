@@ -1,0 +1,361 @@
+<div data-page="novo-pedido" class="page">
+	<!-- Begin: Navbar -->
+	<div class="navbar" style="">
+		<div class="navbar-inner">
+			<div class="left" style="" >
+				<a  class="back link">
+					<i class="icon icon-back">
+					</i>
+				</a>
+			</div>
+
+			<div class="center">
+				SELECIONAR CLIENTE
+			</div>
+		</div>
+
+
+	</div>
+	<!-- End: Navbar -->
+
+
+	<!-- Begin: Page Content -->
+  <div class="page-content">
+
+
+
+
+  	<div class="content-block">
+
+  			<div class="list-block"  id="divHolderListCliente">
+				<ul>
+					<li>
+						<a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Nome, CPF, CNPJ, Apelido" data-back-on-select="true">
+							<select name="cliente_id" id="selectCliente">
+								<option value="Selecionar" index = ""></option>
+							</select>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">Pesquisar Cliente</div>
+									<div  class="item-after"></div>
+								</div>
+							</div>
+						</a>
+					</li>
+
+
+
+					<li>
+						<a href="#" class="item-link smart-select" data-back-on-select="true">
+							<select name="fazenda_id" id="selectFazenda">
+								<option value="Selecionar" index = ""></option>
+							
+							</select>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">Escolha a Fazenda</div>
+									<div id="titulo-after" class="item-after"></div>
+								</div>
+							</div>
+						</a>
+					</li>
+
+
+
+
+					<!-- 	<li>
+						<a href="#" class="item-link smart-select"  data-back-on-select="true" data-virtual-list="true">
+							<select name="fazenda_id" id="selectFazenda">
+								<option value="Selecionar" index = ""></option>
+							
+								<option value="2">João Gomes</option>
+							
+							</select>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">Pesquisar Fazenda</div>
+									<div class="item-after"></div>
+								</div>
+							</div>
+						</a>
+					</li>
+ -->
+
+				</ul>
+			</div>
+
+				<!-- <div class="list-block" id="fazendasCliente">
+				<ul id = "listFazendas">
+					<li>
+						<label class="label-radio item-content">
+							<input type="radio" name="radio" value="books">
+							<span class="item-media">
+								<i class="icon icon-form-radio"></i>
+							</span>
+							<span class="item-inner">
+								<span class="item-title">Fazenda 3</span>
+							</span>
+						</label>
+					</li>
+				</ul>
+			</div> -->
+
+		<div class="list-block" id="divHolderCliente">
+		      <ul>
+		        <li class="align-top">
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-input item-input-field">
+								<textarea class="resizable" name="cliente_id" id = "PedidoCliente" placeholder="Cliente"></textarea>
+							</div>
+						</div>
+					</div>
+				</li>
+		    </ul>
+		</div>
+
+
+  		<form class="list-block no-hairlines no-hairlines-between inputs-list">
+
+
+			<div class="list-block" id="infoPropietario" style="display:none">
+				<ul>
+					<li class="accordion-item">
+						<a href="#" class="item-link">
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">Informações do proprietário</div>
+								</div>
+							</div>
+						</a>
+						<div class="accordion-item-content">
+							<ul id = 'infoCliente'>
+								<li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div class="item-title floating-label">Nome do Proprietário</div>
+											<div class="item-input item-input-field disabled">
+												<input id = "ProprietarioNome" type="text" class="" value="">
+											</div>
+										</div>
+									</div>
+								</li><li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div class="item-title floating-label">Endereço de Cobrança</div>
+											<div class="item-input item-input-field disabled">
+												<input id = "ProprietarioEndereco" type="text" class="" value="">
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div class="item-title floating-label">Município</div>
+											<div class="item-input item-input-field disabled">
+												<input id = "ProprietarioCidade" type="text" class="" value="">
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div class="item-title floating-label">Estado</div>
+											<div class="item-input item-input-field disabled">
+												<input id = "ProprietarioEstado" type="text" class="" value="">
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div class="item-title floating-label">CEP</div>
+											<div class="item-input item-input-field disabled">
+												<input id = "ProprietarioCEP" type="text" class="" value="">
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-content">
+										<div class="item-inner">
+											<div class="item-title floating-label">E-mail</div>
+											<div class="item-input item-input-field disabled">
+												<input id = "ProprietarioEmail" type="text" class="" value="">
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="list-block" style="display:none" id="fazendasCliente">
+				<ul id = "listFazendas">
+					<!-- <li>
+						<label class="label-radio item-content">
+							<input type="radio" name="radio" value="books">
+							<span class="item-media">
+								<i class="icon icon-form-radio"></i>
+							</span>
+							<span class="item-inner">
+								<span class="item-title">Fazenda 3</span>
+							</span>
+						</label>
+					</li> -->
+				</ul>
+			</div>
+
+			<ul id = 'infoClienteRoteiroEnderecoEntrega'>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Endereço de Entrega</div>
+							<div class="item-input item-input-field disabled">
+								<input id= "FazendaEndereco" type="text" value=" ">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Bairro</div>
+							<div class="item-input item-input-field disabled">
+								<input id= "FazendaBairro" type="text" value=" ">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Número</div>
+							<div class="item-input item-input-field disabled">
+								<input id= "FazendaNumero" type="text" value=" ">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Cidade</div>
+							<div class="item-input item-input-field disabled">
+								<input id= "FazendaCidade" type="text" value=" ">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Estado</div>
+							<div class="item-input item-input-field disabled">
+								<input id= "FazendaEstado" type="text" value=" ">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Roteiro</div>
+							<div class="item-input item-input-field disabled">
+								<textarea id="FazendaRoteiro" placeholder="Roteiro"> </textarea>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+
+
+
+
+
+
+
+
+		</form>
+
+
+
+<!-- 		<div class="list-block">
+		      <ul>
+		        <li class="item-content" id="tirarFotoComprovante">
+		          <div class="item-inner">
+		            <div class="item-title">Foto comprovante</div>
+		            <div class="item-after">
+		            	<i class="fa fa-camera fa-2x color-green"></i>
+		            </div>
+		          </div>
+		        </li>
+
+		        <li class="item-content" id="liFotoComprovante" style="display: none">
+		        	<input type="hidden" id="fotobase64">
+                  <div class="item-inner">
+                    <div class="item-title">
+                    	<a href="" id= "visualizarComprovante" class="open-popup popup-comprovante">Visualizar</a>
+                    </div>
+                    <div class="item-after">
+                    	<i id="removeComprovante" class="fa fa-times fa-2x color-red"></i>
+                    </div>
+                  </div>
+                </li>
+		    </ul>
+		</div> -->
+		<div class="list-block">
+		      <ul>
+		        <li class="align-top">
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-input item-input-field">
+								<textarea class="resizable" name="roteiro" id = "PedidoRoteiro" placeholder="Roteiro"></textarea>
+							</div>
+						</div>
+					</div>
+				</li>
+		    </ul>
+		</div>
+
+
+		<div class="list-block">
+		      <ul>
+		        <li class="align-top">
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-input item-input-field">
+								<textarea class="resizable" name="obs" id = "obsPedido" placeholder="Observação"></textarea>
+							</div>
+						</div>
+					</div>
+				</li>
+		    </ul>
+		</div>
+
+
+
+
+		<div class="row center">
+			<div class="col-50">
+				<a href="pageindex.html" data-forceUrl="true" class="back button button-fill button-raised color-green">Voltar</a>
+			</div>
+			<div class="col-50">
+				<a href="" id="finalizarPedido" class="button button-fill button-raised color-green">Finalizar</a>
+			</div>
+		</div>
+
+  	</div>
+
+
+
+
+  	</div>
+	<!-- End: Page Content -->
+</div>

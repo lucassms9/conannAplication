@@ -1,0 +1,197 @@
+<div data-page="novo-pedido-2" class="page page-on-center">
+	<!-- Begin: Navbar -->
+	<div class="navbar" style="">
+		<div class="navbar-inner">
+			<div class="left" style="" >
+				<a href="#" data-panel="right" class="link back">
+					<i class="icon icon-back">
+					</i>
+				</a>
+			</div>
+
+			<div class="center">
+				SELECIONAR PRODUTOS
+			</div>
+
+			<div class="right">
+
+				<a href="" class="link" id="iconeCarrinho" >
+					<i class="fa fa-shopping-cart" >
+					</i>
+				</a>
+				<a id="valida-preco-parcela" class="link" >
+					<i class="fa fa-chevron-right" >
+					</i>
+				</a>
+
+				
+			</div>
+		</div>
+
+
+	</div>
+	<!-- End: Navbar -->
+ 
+	<!-- Begin: Search Bar -->
+	<form class="searchbar searchbar-init" data-search-list=".list-block-search" data-search-in=".item-title, .item-subtitle">
+		<div class="searchbar-input">
+			<input type="search" placeholder="Pesquisar produtos" class="">
+			<a href="#" class="searchbar-clear"></a>
+		</div>
+	</form>
+	<!-- End: Search Bar -->
+
+	<div class="searchbar-overlay"></div>
+
+	<!-- Begin: Page Content -->
+	<div class="page-content">
+
+		<div class="list-block">
+
+		</div>
+
+
+		<div class="content-block searchbar-not-found" style="display: none;">
+			<p>Nenhum produto encontrado</p>
+		</div>
+
+		<div class="list-block list-block-search searchbar-found" style="display: block;">
+
+			<ul id = "listProdutoTabela">
+				
+
+			</ul>
+
+			
+
+
+		</div>
+
+	</div>
+	<!-- End: Page Content -->
+
+
+	<div class="popup popup-produtoinfo">
+
+		<div class="navbar" style="">
+			<div class="navbar-inner">
+				<div class="center">
+					<span id = "itemNome" > Pasto Seco Connan</span>
+					<input type = "hidden" value="" id = "itemId" />
+				</div>
+
+				<div class="right" style="" >
+					<a id="close-modal-1" href="#" class="link close-popup">
+						<i class="icon icon-close"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-block">
+
+			<div class="row">
+				<img id = "itemFoto" style="margin:0 auto" src="img/connan-default.jpg">
+			</div>
+
+
+			<p id = "itemDescricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quidem iste eveniet ut quis recusandae repellat itaque sed suscipit inventore molestias veniam maxime labore, velit doloribus quas saepe error, dignissimos.</p>
+
+			<form class="list-block no-hairlines no-hairlines-between inputs-list">
+				<ul>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Preço unit. tabela - R$</div>
+								<!-- <span style="position: absolute;top: 32px;">R$</span> -->
+								<div class="item-input item-input-field not-empty-state">
+									<input type="hidden" id = "itemCarrinhoId" class="" value="0" min="0">
+									<input type="number" id = "itemPrecoTabela" class="" value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+					
+
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Quantidade</div>
+								<div class="item-input item-input-field">
+									<input type="number" id = "itemQuantidade" class="" value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">% de desconto</div>
+								<div class="item-input item-input-field">
+									<input type="number" id = "itemPercentDesconto" step ="0.1" class="" value="0" max = "100" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+					
+
+						<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Preço unit. negociado (c/ financeiro) - R$</div>
+								
+								<div class="item-input item-input-field ">
+									<input type="number" id = "itemPrecoNego1" class="" value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Valor de frete por saca (s/ financeiro) - R$</div>
+								<div class="item-input item-input-field ">
+									<input type="hidden" id = "itemPrecoFreteTotal" class="" value="0" min="0">
+									<input type="number" id = "itemPrecoFrete" class="" value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li style="display: none;">
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Total negociado para venda (s/ frete) - R$</div>
+								<div class="item-input item-input-field">
+									<input type="number" id = "itemPrecoNegociado" class="" value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Total negociado para venda (com frete) - R$</div>
+								<div class="item-input item-input-field ">
+									<input type="number" id = "itemPrecoNegociadoComFrete" disabled='disabled' class="" value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+
+					
+				</ul>
+			</form>
+
+
+			<a href="" id="btnAdicionaItem" class="button button-teal button-fill">Adicionar ao carrinho</a>
+		</div>
+	</div>
+
+	
+
+
+</div>

@@ -1,0 +1,94 @@
+<div data-page="pesquisar-produtos" class="page">
+	<!-- Begin: Navbar -->
+	<div class="navbar" style="">
+		<div class="navbar-inner">
+			<div class="left" style="" >
+				<a href="pageindex.html" data-forceUrl="true" class="link">
+					<i class="icon icon-back">
+					</i>
+				</a>
+			</div>
+
+			<div class="center">
+				PRODUTOS
+			</div>
+		</div>
+	</div>
+	<!-- End: Navbar -->
+
+	<form class="searchbar searchbar-init" data-search-list=".list-block-search" data-search-in=".item-title">
+		<div class="searchbar-input">
+			<input type="search" placeholder="Pesquisar">
+			<a href="#" class="searchbar-clear"></a>
+		</div>
+	</form>
+
+
+	<div class="searchbar-overlay"></div>
+
+
+
+	<!-- Begin: Page Content -->
+	<div class="page-content">
+
+
+		<div class="content-block searchbar-not-found" style="display: none;">
+			<p>Nenhum produto encontrado.</p>
+		</div>
+
+		<div class="list-block list-block-search searchbar-found" style="display: block;">
+			<ul id="produtosList">
+
+				
+			</ul>
+		</div>
+
+	</div>
+	<!-- End: Page Content -->
+
+	<div class="popup popup-produtoinfo">
+
+		<div class="navbar" style="">
+			<div class="navbar-inner">
+				<div class="center">
+					<span id = "itemNome" ></span>
+					<input type = "hidden" value="" id = "itemId" />
+				</div>
+
+				<div class="right" style="" >
+					<a href="#" class="link close-popup">
+						<i class="icon icon-close"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-block">
+
+			<div class="row">
+				<img id = "itemFoto" style="margin:0 auto" src="img/connan-default.jpg">
+			</div>
+
+
+			<p id = "itemDescricao"></p>
+
+			<form class="list-block no-hairlines no-hairlines-between inputs-list">
+				<ul>	
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Preço produto</div>
+								<div class="item-input item-input-field">
+									<input type="number" id = "itemPrecoProduto" class="" value="0" disabled min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</form>
+
+
+			<a href="" id="btnAdicionaItem" class="button button-teal button-fill">Adicionar ao carrinho</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,257 @@
+<div data-page="novo-cliente-1" class="page">
+	<!-- Begin: Navbar -->
+	<div class="navbar" style="">
+		<div class="navbar-inner">
+			<div class="left" style="" >
+				<a href="pageindex.html" data-forceUrl="true" class="link">
+					<i class="icon icon-back">
+					</i>
+				</a>
+			</div>
+			<div class="center">
+				DADOS DO CLIENTE
+			</div>
+		</div>
+	</div>
+	<!-- End: Navbar -->
+	<!-- Begin: Page Content -->
+  <div class="page-content"  style="padding-top: 70px !important">
+  	<div class="content-block">
+  		<form id = "novoCliente1" method="POST" class="list-block no-hairlines no-hairlines-between inputs-list">
+
+				<!-- <div class="list-block-title">Cliente prefere boleto:</div> -->
+				<ul>
+					
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">CPF / CNPJ *</div>
+							<div class="item-input item-input-field">
+								<input name = 'cpf' type="tel" id="clienteCPF" maxlength="20" class="mask-cpf-cnpj" autofocus="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Nome / Razão Social *</div>
+							<div class="item-input item-input-field">
+								<input name= 'nome_completo' maxlength="90" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Data de nascimento *</div>
+							<div class="item-input item-input-field">
+								<input name = 'data_nascimento' id="data_nascimento" placeholder = "Data de nascimento" type="tel" class="mask-data">
+							</div>
+						</div>
+					</div>
+				</li>
+			
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Endereço (Correspondência) *</div>
+							<div class="item-input item-input-field">
+								<input name="logradouro" maxlength="90" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Número *</div>
+							<div class="item-input item-input-field">
+								<input name="numero" maxlength="5" type="tel" class="mask-numero">
+							</div>
+						</div>
+					</div>
+				</li><li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Bairro *</div>
+							<div class="item-input item-input-field">
+								<input name="bairro" maxlength="50"  type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Complemento</div>
+							<div class="item-input item-input-field">
+								<input name="complemento" maxlength="15" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+
+			
+					<li>
+						<a href="#" class="item-link smart-select" data-back-on-select = "true" data-open-in="popup" data-searchbar="false">
+							<select id="filtroEstado" name="estado1">
+								
+							</select>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">Estado*</div>
+								<div style="top: -20px;" class="item-after"></div></div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="item-link smart-select" data-back-on-select = "true" data-open-in="popup" data-searchbar="false">
+							<select id="filtroCidade" name="cidade1">
+								<option value=""></option>
+							</select>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">Cidade*</div>
+								<div style="top: -20px;" class="item-after"></div></div>
+							</div>
+						</a>
+					</li>
+			
+		
+
+				<!-- <li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Município *</div>
+							<div class="item-input item-input-field">
+								<input name="cidade" maxlength="50" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Estado *</div>
+							<div class="item-input item-input-field">
+								<input name="estado" type="text" maxlength="2" class="">
+							</div>
+						</div>
+					</div>
+				</li> -->
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">CEP *</div>
+							<div class="item-input item-input-field">
+								<input name="cep" id = "clienteCEP" type="tel" class="mask-cep">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Telefone *</div>
+							<div class="item-input item-input-field">
+								<input id = "ClienteTelefone" maxlength="20" name="telefone" type="tel" class="mask-telefone">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Celular *</div>
+							<div class="item-input item-input-field">
+								<input name="celular" maxlength="20" id="clienteCelular" type="tel" class="mask-telefone-celular">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">E-mail financeiro *</div>
+							<div class="item-input item-input-field">
+								<input name="email_financeiro" maxlength="120" type="email" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<div class="content-block-title">Cliente prefere boleto:</div>
+							<li>
+								<label class="label-radio item-content">
+									<input type="radio" name="radio" id="boletoEmail" value="email">
+									<span class="item-media">
+										<i class="icon icon-form-radio"></i>
+									</span>
+									<span class="item-inner">
+										<span class="item-title">Por e-mail</span>
+									</span>
+								</label>
+							</li>
+							<li>
+								<label class="label-radio item-content">
+									<input type="radio" name="radio" id="boletoCarga" value="comcarga">
+									<span class="item-media">
+										<i class="icon icon-form-radio"></i>
+									</span>
+									<span class="item-inner">
+										<span class="item-title">Com a carga</span>
+									</span>
+								</label>
+							</li>
+
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Email para aprovação de pedidos *</div>
+							<div class="item-input item-input-field">
+								<input name="email" maxlength="120" type="email" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Nome contato *</div>
+							<div class="item-input item-input-field">
+								<input name = "nome_contato" maxlength="120" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title floating-label">Apelido</div>
+							<div class="item-input item-input-field">
+								<input name = "apelido" maxlength="120" type="text" class="">
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		<div class="row center">
+			<div class="col-50">
+				<a href="pageindex.html" data-forceUrl="true" class="button button-fill button-raised color-green">Voltar</a>
+			</div>
+			<div class="col-50">
+				<input type="submit" class="button button-fill button-raise color-green" id="ButtonNext" value="Próximo"> 
+			</div>
+		</div>
+		</form>
+  	</div>
+
+
+
+
+  	</div>
+	<!-- End: Page Content -->
+</div>

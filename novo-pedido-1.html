@@ -1,0 +1,216 @@
+<div data-page="novo-pedido-1" class="page page-on-center">
+	<!-- Begin: Navbar -->
+	<div class="navbar" style="">
+		<div class="navbar-inner">
+			<div class="left" style="" >
+				<a href="pageindex.html" data-forceUrl="true" class="link">
+					<i class="icon icon-back">
+					</i>
+				</a>
+			</div>
+
+			<div class="center">
+				NOVO PEDIDO 
+			</div>
+		</div>
+
+
+	</div>
+	<!-- End: Navbar -->
+
+	<!-- Begin: Search Bar -->
+	<!-- <form class="searchbar searchbar-init" data-search-list=".list-block-search" data-search-in=".item-title, .item-subtitle">
+		<div class="searchbar-input">
+			<input type="search" placeholder="Pesquisar produtos" class="">
+			<a href="#" class="searchbar-clear"></a>
+		</div>
+	</form> -->
+	<!-- End: Search Bar -->
+
+	<div class="searchbar-overlay"></div>
+
+
+	
+
+	<!-- Begin: Page Content -->
+	<div class="page-content">
+
+		<div class="list-block">
+			<ul>
+
+				<li>
+					<a href="#" class="item-link smart-select" data-open-in="popup" data-searchbar-placeholder="Filial" data-searchbar="false" data-back-on-select="true">
+						<select name="filial" id = 'filial'>
+							<option value="">Selecione</option>
+							<option data-filial="6" value="SP">Boituva</option>
+							<option data-filial="7" value="MS">São Gabriel D'Oeste</option>
+							<option data-filial="8" value="MT">Campo Verde</option>
+							<!-- <option value="MT"></option> -->
+						</select>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title">Selecione filial</div>
+								<div class="item-after">Selecione</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="item-link smart-select" data-open-in="popup" data-searchbar-placeholder="Tabelas" data-searchbar="true" data-back-on-select="true">
+						<select disabled="disabled" name="tabelaDePrecos" id = 'tabelaDePrecos'>
+						</select>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title">Selecione tabela</div>
+								<div id="tabelaPrecos" class="item-after">Selecione</div>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="#" class="item-link smart-select" data-open-in="popup" data-back-on-select="true">
+						<select name="forma-pagamento" id = 'formapagamento'>
+							<option value="">Selecione</option>
+							<option value="1">Prazo</option>
+							<option value="2">Data fixa</option>
+							<option value="3">A vista (pagamento antecipado)</option>
+						</select>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title">Forma de pagamento</div>
+								<div class="item-after">Selecione</div>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				 
+				<li id="liprazodeterminado">
+					<a href="#" class="item-link smart-select" data-open-in="popup" data-back-on-select="true">
+						<select name="1forma-pagamento" id = '1pagamento'>
+							<option value="000">Selecione</option>
+						</select>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title">Prazo determinado</div>
+								<div class="item-after">Selecione</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li id="linumeroparcelas">
+					<a href="#" class="item-link smart-select" data-open-in="popup" data-back-on-select="true">
+						<select name="1forma-pagamento" id = '2pagamento'>
+							<option value="">Selecione</option>
+							<option value="4">1x</option>
+							<option value="22">2x</option>
+							<option value="16">3x</option>
+							<option value="17">4x</option>
+						</select>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title">Nº parcelas</div>
+								<div class="item-after">Selecione</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="item-link smart-select" data-open-in="picker" data-back-on-select="true">
+						<select disabled="disabled" name="imposto" id = 'imposto'>
+							
+							<option value="">Selecione</option>
+								<option value="0.0">Isento</option>
+							<option value="2.8">2,8 %</option>
+							<option value="4.8">4,8 %</option>
+							<option value="6.8">6,8 %</option>
+							<option value="7.2">7,2 %</option>
+						
+
+						</select>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title">ICMS</div>
+								<div class="item-after">Selecione</div>
+							</div>
+						</div>
+					</a>
+				</li>
+
+
+				<li>
+					<label class="label-radio item-content">
+						<input type="radio" name="tipo_frete" value="cif">
+						<span class="item-media">
+							<i class="icon icon-form-radio"></i>
+						</span>
+						<span class="item-inner">
+							<span class="item-title">Frete CIF (Posto/Destino final)</span>
+						</span>
+					</label>
+				</li>
+				<li>
+					<label class="label-radio item-content">
+						<input type="radio" name="tipo_frete" value="fob">
+						<span class="item-media">
+							<i class="icon icon-form-radio"></i>
+						</span>
+						<span class="item-inner">
+							<span class="item-title">Frete FOB (À retirar)</span>
+						</span>
+					</label>
+				</li>
+
+			</ul>
+
+
+			<ul class="list-block no-hairlines no-hairlines-bottom" id="sim_referencia">
+				<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Nome Cliente</div>
+								<div class="item-input item-input-field">
+									<input id = "simulacao_referencia" name= 'simulacao_referencia' type="text" class="">
+								</div>
+							</div>
+						</div>
+				</li>
+			</ul>
+		</div>
+
+
+		<div class="content-block cb-parcelas">
+			<form class="list-block no-hairlines no-hairlines-between inputs-list">
+
+				<div class="list-block-title">Parcelas:</div>
+
+				<ul id="parcelas">
+
+				</ul>
+			</form>
+		</div>
+
+
+
+		<div class="content-block">
+
+			<div class="row">
+				<div class="col-50 btnSimuladorCancela">
+					<a href="pageindex.html" data-forceUrl="true" class="button button-fill button-raised color-red">Cancelar</a>
+				</div>
+				<div class="col-50 btnPedidoVoltar">
+					<a href="pageindex.html" data-forceUrl="true" class="button button-fill button-raised color-green">Voltar</a>
+				</div>
+				<div class="col-50">
+					<a id = "btnPedido2" class="button button-fill button-raised color-green">Próximo</a>
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+	<!-- End: Page Content -->
+
+
+</div>

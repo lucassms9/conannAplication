@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Begin: Basic Meta Tags -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- Begin: Stylesheets -->
+	<link rel="stylesheet" href="assets/vendor/framework7/css/framework7.material.min.css" />
+	<link rel="stylesheet" href="assets/vendor/framework7/css/framework7.material.colors.min.css" />
+	<link rel="stylesheet" href="assets/vendor/framework7-plugins/keypad/framework7.keypad.min.css" />
+	<link rel="stylesheet" href="assets/vendor/framework7-plugins/indexed-list/framework7.indexed-list.min.css" />
+	<link rel="stylesheet" href="assets/vendor/framework7-plugins/toast/toast.css" />
+	<link rel="stylesheet" href="assets/vendor/framework7-plugins/tour-guide/tour-guide.css" />
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css" />
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+	<link rel="stylesheet" href="assets/vendor/hamburgers/hamburgers.min.css" />
+	<link rel="stylesheet" href="assets/vendor/material-icons/material-icons.css" />
+	<link rel="stylesheet" href="assets/vendor/pattern-lock/patternLock.css" />
+	<link rel="stylesheet" href="assets/vendor/rateyo/jquery.rateyo.min.css" />
+	<link rel="stylesheet" href="assets/vendor/tooltipster/css/tooltipster.bundle.min.css" />
+	<link rel="stylesheet" href="assets/vendor/tooltipster/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css"
+	/>
+
+	<link rel="stylesheet" href="assets/vendor/nectar/nectar.css" />
+
+	<link rel="stylesheet" href="assets/custom/css/components.css" />
+	<link rel="stylesheet" href="assets/custom/css/pages.css" />
+	<!-- End: Stylesheets -->
+
+	<title>Connan</title>
+</head>
+
+<body class="theme-green layout-light">
+	  <div class="statusbar-overlay"></div>
+
+	<div class="panel-overlay"></div>
+
+
+
+
+	<!-- Begin: Left Side Panel -->
+	<div class="panel panel-left panel-cover">
+		<div class="panel-header">
+			<div class="user-info">
+				<img class="img-circle user-photo" style = "background-color: white" id="fotoUsuario" src="https://randomuser.me/api/portraits/men/60.jpg" width="64" height="64"
+				    alt="Avatar" />
+				<div class="user-name"></div>
+				<div class="user-location">
+					<i class="fa fa-fw fa-map-marker"></i>
+					<span>Brasil</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="list-block no-hairlines no-hairlines-between">
+			<ul>
+				<li>
+					<a onclick="gotoMain()" class="item-link close-panel">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-home"></i>
+								<!-- <img src="assets/custom/img/home.png" width="24" alt="Home" /> -->
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Início</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="meus-pedidos.html" class="item-link close-panel">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-file-o"></i>
+								<!-- <img src="assets/custom/img/indexed-list.png" width="24" alt="Components" /> -->
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Meus Pedidos</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				
+					<li style="display: none;" id="pedidos-gestor">
+					<a href="meus-pedidos-gestor.html" class="item-link close-panel">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-file-o"></i>
+								<!-- <img src="assets/custom/img/indexed-list.png" width="24" alt="Components" /> -->
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Pedidos (Geral)</div>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li style="display: none;" id="pedidos-supervisor">
+					<a href="meus-pedidos-supervisor.html" class="item-link close-panel">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-file-o"></i>
+								<!-- <img src="assets/custom/img/indexed-list.png" width="24" alt="Components" /> -->
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Pedidos (Geral)</div>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li style="display: none;" id="aprovacao-pedidos-show">
+					<a href="aprovacao-pedidos.html" class="item-link close-panel">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa fa-check-circle-o"></i>
+								<!-- <img src="assets/custom/img/indexed-list.png" width="24" alt="Components" /> -->
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Aprovação de Pedidos</div>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="minhas-simulacoes.html" class="item-link close-panel">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-calculator"></i>
+								<!-- <img src="assets/custom/img/indexed-list.png" width="24" alt="Components" /> -->
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Minhas Simulações</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="novo-cliente.html" class="item-link close-panel">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-user-plus"></i>
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Novo Cliente</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="pesquisar-cliente-2.html" id="novaFazenda" class="item-link close-panel">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa fa-home"></i>
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Nova Fazenda</div>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="#" onclick="redirect('novo-pedido-1.html')" class="item-link close-panel">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-plus"></i>
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Novo Pedido</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="item-link close-panel" href="pesquisar-produtos.html">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-search"></i>
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Pesquisar Produtos</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="item-link close-panel" href="pesquisar-cliente.html">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-search"></i>
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Pesquisar Clientes</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="meus-dados.html" class="item-link close-panel">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-user-o"></i>
+								<!-- <img src="assets/custom/img/indexed-list.png" width="24" alt="Components" /> -->
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Meus Dados</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="item-link close-panel disabled" href="modo-offline.html">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-cloud-download"></i>
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Modo offline</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="item-link close-panel" onclick="logout()">
+						<div class="item-content">
+							<div class="item-media">
+								<i class="connanicon fa fa-lg fa-sign-out"></i>
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Sair</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- End: Left Side Panel -->
+
+
+	<div class="views">
+
+
+
+		<div class="view view-main">
+
+			<a id="btnDescartaSimulacao" class="floating-button color-green" style="display:none; left:16px !important">
+				<i class="fa fa-trash fa-lg"></i>
+			</a>
+
+			<div class="pages navbar-fixed" style="background-color: #007C76">
+				
+			</div>
+		</div>
+
+
+
+	</div>
+
+	</div>
+	</div>
+
+	<div class="popup popup-login tablet-fullscreen">
+
+		<div class="content-block">
+
+
+			<div class="logo-container">
+
+					<img src="img/logo-connan-1.png" alt="" style="width: 60%">
+
+				
+			</div>
+
+			<!-- <img src="img/5dots.png" alt="" style=""> -->
+			<div class="list-block no-hairlines no-hairlines-between inputs-list" style="
+				    
+				    
+				    
+				    background-image: url(img/5dots.png);
+				    background-repeat: no-repeat;
+				    background-position-x: 0px;
+				    position: relative;
+				    background-position-y: -53px;
+				    margin-top: 80px;
+				    margin-bottom: 0px;
+			
+			
+
+
+			">
+				<ul class="form-login" style="
+					
+					
+					padding: 40px 20px;
+					width: 80%;
+					margin: 0px 5%;
+					position: relative;
+					left: 33px;
+					background-image: url(img/bgformlogin.png);
+				    background-size: 100% 100%;
+
+				
+				">
+					<form id="form-login" method="post" autocomplete="off">
+						
+					<li>
+						<div class="item-content">
+
+							<div class="item-inner">
+								<div class="item-title label">SEU CPF / CNPJ</div>
+								<div class="item-input item-input-field">
+									<!-- <input style="position: absolute; top: 0; opacity: 0.0;" id="maskCPF" type="number" class=""> -->
+									<input type="tel" id="loginCPF" name ="cpf" class="mask-cpf-cnpj" tabindex="">
+								</div>
+								<div class="input-error"></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+
+							<div class="item-inner">
+								<div class="item-title label">SUA SENHA</div>
+								<div class="item-input item-input-field">
+									<input type="password" id="loginSenha" name="senha" class="">
+								</div>
+								<div class="input-error"></div>
+							</div>
+						</div>
+					</li>
+					<li style="padding-top: 20px">
+						<div class="item-content">
+							<div class="item-inner">
+								<input type="submit" class="button" value="ENTRAR" id="btnLogin"> 
+							</div>
+						</div>
+					</li>
+
+
+				</ul>
+			</div>
+				<img src="img/3dots.png" alt="" style="
+				    position: relative;
+				    left: 50px;
+				">
+
+
+
+
+			<!-- <a href="" class="button" id="btnLogin">ENTRAR</a> -->
+					</form>
+		</div>
+
+
+
+
+	</div>
+
+<div class="popup popup-comprovante">
+	<div class="navbar" style="">
+		<div class="navbar-inner">
+			<div class="left" style="">
+				<a class="close-popup" href="#">
+					<i class="icon icon-back">
+					</i>
+				</a>
+			</div>
+
+			<div class="center">
+				Foto
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+    <div class="content-block">
+
+		<img src="" alt="" id="base64Comprovante">
+
+
+    </div>
+  </div>
+
+
+
+
+	<div class="picker-modal">
+		<!-- Picker Modal Toolbar, optional -->
+		<div class="toolbar">
+			<div class="toolbar-inner">
+				<div class="left"></div>
+				<div class="right">
+					<a href="#" class="link close-picker">OK</a>
+				</div>
+			</div>
+		</div>
+		<!-- Picker Modal Inner -->
+		<div class="picker-modal-inner">
+
+		</div>
+	</div>
+
+	<!-- Begin: Scripts -->
+	<script type="text/javascript" src="js/vars.js"></script>
+
+	<script type="text/javascript" src="assets/vendor/jquery/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.caret.js"></script>
+	<script type="text/javascript" src="assets/vendor/framework7/js/framework7.min.js"></script>
+	<script type="text/javascript" src="assets/vendor/framework7-plugins/keypad/framework7.keypad.min.js"></script>
+	<script type="text/javascript" src="assets/vendor/framework7-plugins/indexed-list/framework7.indexed-list.min.js"></script>
+	<script type="text/javascript" src="assets/vendor/framework7-plugins/toast/toast.js"></script>
+	<!-- <script type="text/javascript" src="assets/vendor/framework7-plugins/tour-guide/tour-guide.js"></script> -->
+	<script type="text/javascript" src="assets/vendor/jquery-validation/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="assets/vendor/jquery-validation/additional-methods.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/vendor/pattern-lock/patternLock.min.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/vendor/rateyo/jquery.rateyo.min.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/vendor/snazzy-maps/snazzy-maps.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/vendor/tooltipster/js/tooltipster.bundle.min.js"></script> -->
+	<script type="text/javascript" src="assets/vendor/vivus/vivus.min.js"></script>
+	<script type="text/javascript" src="assets/vendor/moment/moment.min.js"></script>
+	<!-- <script type="text/javascript" src="https://unpkg.com/dexie@latest/dist/dexie.js"></script> -->
+	<!-- <script type="text/javascript" src="js/offline.js"></script> -->
+
+	<script type="text/javascript" src="assets/custom/js/init.js"></script>
+	<script type="text/javascript" src="assets/vendor/nectar/nectar.js"></script>
+	<script type="text/javascript" src="assets/custom/js/components.js"></script>
+	<script type="text/javascript" src="assets/custom/js/themes.js"></script>
+	<script type="text/javascript" src="js/jquery.mask.js"></script>
+	<script type="text/javascript" src="js/classes/app.js"></script>
+
+
+
+	<script type="text/javascript" src="js/classes/cliente.class.js"></script>
+	<script type="text/javascript" src="js/classes/pedido.class.js"></script>
+	<!-- Classes App -->
+	<script type="text/javascript" src="assets/custom/js/pages.js"></script>
+
+	<!-- <script type="text/javascript" src="js/classes/produto.class.js"></script> -->
+	<!-- <script type="text/javascript" src="js/classes/app.class.js"></script> -->
+	<!-- <script type="text/javascript" src="js/classes/pages.class.js"></script> -->
+
+	<!-- Fim Classes App -->
+	
+
+
+
+	
+
+
+	<script type="text/javascript" src="cordova.js"></script>
+
+	<!-- <script type="text/javascript" src="js/templates.js"></script> -->
+	<!-- POPUPS AND MODALS -->
+
+	<script type="text/javascript">
+
+
+
+	
+		'use strict';
+
+		//console.log(app.checkLogin())
+
+		var internal_url = internal_url.pre_stage;
+		var request_url = request_urls.pre_stage;
+
+		(function () {
+
+			$
+
+			myApp.init();
+
+		  	request_url = 'http://web-qa.mobitap.online/connan/backoffice/mobile';
+		  	internal_url = 'http://web-qa.mobitap.online/connan/backoffice/mobile';
+
+
+			// if (true) {
+
+				try {
+
+					var stores = {
+						produtos: '++id, codigo, codigo_connan, nome, valor_unitario_tabela, valor_frete, descricao, peso_liq, peso_bruto, url_foto, created, modified, updated',
+						clientes: '++id, cpf, nome_completo, email, senha, codigo_nova_senha, telefone, celular, data_nascimento, cep, logradouro, numero, complemento, bairro, cidade, estado, created, modified, usuario_id',
+						usuarios: '++id, codigo, liberado, nome_completo, cpf, email, senha, codigo_nova_senha, telefone, celular, data_nascimento, cep, logradouro, numero, complemento, bairro, cidade, estado, usuario_tipo_id, created, modified, foto, ativo',
+						pedidos: '++id, codigo, usuario_id, vendedor_id, cliente_id, valor_pedido, data_pedido, data_entrega, observacao, created, modified, accessed, pedido_status_id, prazo, tabela_id, forma_pagamento, num_parcelas',
+						fazendas: '++id, id, cliente_id, fazenda_id, created, modified',
+						clientes_fazendas: '++id, cliente_id, fazenda_id, created, modified',
+						pedido_parcelas: '++id, pedido_id, data_parcela, parcela_valor, created, modified',
+						tabela_de_precos: '++id, nome, vigencia, created, modified, updated',
+						tabela_de_preco_produto: '++id, tabela_de_preco_id, produto_id, preco_frete, preco_tabela',
+						itens_pedido: '++id, pedido_id, produto_id, quantidade, preco_frete, preco_negociado, valor_total, created, modified, accessed, total_desconto',
+						pedido_status: '++id, nome, created, modified',
+					}
+
+
+
+
+
+
+					var db = new Dexie('connan_offline')
+					db.version(1.1).stores(stores);
+					db.clientes.each(function (c) {
+						
+					})
+
+				}catch(err){
+
+					console.warn(err)
+					
+				}
+
+
+			// }
+
+
+			mainView.loadPage({
+				url: 'pageindex.html'
+			})
+
+
+			var $fotoUsuario = $('#fotoUsuario')
+			$fotoUsuario.on('click', function (event) {
+
+				myApp.showPreloader()
+
+				// setTimeout(function () {
+
+
+					var fotoSuccess = function (imageData) {
+
+						myApp.hidePreloader()
+
+				      	var foto = "data:image/jpeg;base64," + imageData
+				      	var usuario_id = localStorage.getItem('Usuario.id')
+
+				      	$.ajax({
+				      		url: request_url+'/usuarios/altera_foto/'+usuario_id,
+				      		type: 'POST',
+				      		dataType: 'json',
+				      		data: {base64_foto: foto},
+				      	})
+				      	.done(function() {
+				      		console.log("success");
+				      	})
+				      	.fail(function() {
+				      		console.log("error");
+				      	})
+				      	.always(function() {
+				      		console.log("complete");
+				      	});
+				      	
+
+				      	$fotoUsuario.attr('src', foto);
+
+						var toast = myApp.toast('Foto alterada', '<i class="fa fa-camera"></i>');
+						toast.show();
+
+					}
+
+					var fotoFail = function () {
+
+					}
+
+					try {
+
+					  var obj = null;
+
+					  if (typeof(navigator.camera) !== 'undefined') {
+					    obj = navigator.camera
+					  }
+
+					  if (typeof(window.navigator.camera) !== 'undefined') {
+					    obj = window.navigator.camera
+					  }
+
+					  	obj.getPicture(fotoSuccess, fotoFail, {
+							targetWidth: 300,
+							targetHeight: 300,
+							quality: 40,
+							destinationType: Camera.DestinationType.DATA_URL
+						})						
+
+					} catch(err){
+
+					  
+					  return myApp.alert('Não foi possível abrir a camera, tente novamente. \n\n' + err.message)
+
+
+					}
+
+
+
+				event.preventDefault();
+				/* Act on the event */
+			});
+
+
+
+
+			if (!localStorage.getItem('Usuario.id')) {
+
+
+				myApp.popup('.popup-login', true)
+			} else {
+
+				var $usuario_nome = $('.user-name')
+				var usuario_nome = localStorage.getItem('Usuario.nome_completo')
+				$usuario_nome.html(usuario_nome)
+
+
+
+				var base64_foto = localStorage.getItem('Usuario.base64_foto')
+
+
+				// console.log(typeof(base64_foto))
+					// alert(base64_foto != 'null')
+
+				if (base64_foto != 'null') {
+					$('#fotoUsuario').attr('src', base64_foto);					
+				}else{
+					// localStorage.getItem('Usuario.base64_foto')
+					$('#fotoUsuario').attr('src', 'img/default-profile.png');					
+				}
+
+			}
+		})();
+
+		function logout() {
+
+			myApp.confirm('Deseja realmente sair?', function () {
+
+				var cpf = localStorage.getItem('Login.cpf')
+				localStorage.clear()
+				localStorage.setItem('Login.cpf', cpf)
+
+				mainView.router.back({
+				  url: 'pageindex.html', // - in case you use Ajax pages
+				  force: true
+				});
+
+
+				myApp.popup('.popup-login', true)
+
+			})
+
+
+		}
+
+
+
+	</script>
+
+
+	<!-- End: Scripts -->
+
+
+
+	
+
+
+
+	<!-- Templates -->
+
+
+		<script id="previewCarrinho" type="text/template7">
+			<div class="card">
+				<div class="card-content">
+					<div class="list-block no-hairlines no-hairlines-between">
+						<ul class="price-summary">
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title">Sub-total 
+											<!-- (<span class="product-count">2</span> Itens) -->
+
+										</div>
+										<div class="item-after">R$ &nbsp;
+											<span class="subtotal">{{subtotal}}</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title">Frete (c/ financeiro)</div>
+										<div class="item-after">R$ &nbsp;
+											<span class="shipping-charges">{{frete_com_financeiro}}</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li style="display: none;">
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title">Desconto</div>
+										<div class="item-after">% (média) &nbsp;
+											<span class="desconto">{{media_desconto}}</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title">
+											<b>Total</b>
+										</div>
+										<div class="item-after">
+											<b>R$
+												<span id="totalPedidopage3" class="payable-amount">
+													{{total}}
+												</span>
+											</b>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</script>
+
+
+
+
+	<!-- End: Templates -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<div data-page="meus-pedidos" class="page">
+	<!-- Begin: Navbar -->
+	<div class="navbar" style="">
+		<div class="navbar-inner">
+			<div class="left" style="" >
+				<a href="pageindex.html" data-forceUrl="true" class="link">
+					<i class="icon icon-back">
+					</i>
+				</a>
+			</div>
+
+			<div class="center">
+				MEUS PEDIDOS
+			</div>
+
+
+			<div class="right" style="" >
+
+				<a href="novo-pedido-1.html" class="link">
+			      <i class="material-icons">add</i>
+				</a>
+			</div>
+		</div>
+
+
+	</div>
+	<!-- End: Navbar -->
+
+<!-- 	<div class="toolbar tabbar toolbar-bottom">
+	    <div class="toolbar-inner">
+	        <a href="#tab1" class="tab-link active">
+	            <i class="fa fa-list-alt"></i>
+	        </a>
+	        <a href="#tab2" class="tab-link">
+	            <i class="fa fa-2x fa-filter"></i>
+	            Filtros
+	        </a>
+	    </div>
+	</div> -->
+
+
+
+	<div class="toolbar tabbar toolbar-bottom">
+	    <div class="toolbar-inner">
+	        <a href="#tab1" class="tab-link active">
+	        	<i class="fa fa-file-o fa-lg"></i>
+	            <span class="tabbar-label">Pedidos</span>
+	        </a>
+	        <a href="#tab2" class="tab-link">
+	        	<i class="fa fa-filter fa-lg"></i>
+	            <span class="tabbar-label">Filtros</span>
+	        </a>
+	    </div>
+	</div>
+
+
+
+
+
+	<!-- Begin: Page Content -->
+  <div class="page-content tabs">
+
+
+
+  	<div id="tab1" class="tab active">
+	  	<div class="list-block media-list">
+	  	<input type="text" id="UrlCopy" style="opacity: 0; height: 0">
+	  	  <ul id="pedidosList">
+	  	    
+	  	  </ul>
+	  	</div>
+  		
+  	</div>
+
+
+  	<div id="tab2" class="tab">
+
+		<div class="content-block">
+
+			<div class="list-block no-hairlines no-hairlines-between">
+				<ul>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">CPF / CNPJ</div>
+								<div class="item-input item-input-field">
+									<input type="tel" id="cpf-pedido-cliente" class="mask-cpf-cnpj1" name="cpfCnpj">
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="list-block no-hairlines no-hairlines-between ">
+				<ul>
+					<li>
+						<a href="#" class="item-link smart-select" data-open-in="popup" data-searchbar="false">
+							<select name="status" multiple="" id="status_pedido">
+							<!-- 	<option value="1">Pendente</option>
+								<option value="2">Aprovado</option>
+								<option value="3">Entrega Pendente</option> -->
+							</select>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">Status</div>
+								<div id="id-status" class="item-after"></div></div>
+							</div>
+						</a>
+					</li>
+
+					<!-- <li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Data início</div>
+								<div class="item-input item-input-field">
+									<input  name = 'data_inicio' id="data_inicio" placeholder = "" type="text" class="" data-mask="00/00/0000">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Data limite</div>
+								<div class="item-input item-input-field">
+									<input name = 'data_limite' id="data_limite" placeholder = "" type="text" class="">
+								</div>
+							</div>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+
+				
+			<div class="row center">
+				<div class="col-100">
+					<a href="#" class="button button-fill button-raise color-green" id="aplicar-filtro"> Aplicar </a>
+
+
+
+					<!-- <input type="button" value = "Próximo" id="btnClienteProximo" class="button button-fill button-raised color-green"> -->
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+  	</div>
+	<!-- End: Page Content -->
+</div>

@@ -1,0 +1,354 @@
+<div data-page="novo-pedido-3" class="page">
+	<!-- Begin: Navbar -->
+	<div class="navbar" style="">
+		<div class="navbar-inner">
+			<div id="voltar" class="left" style="" >
+				<a href="#" class="link back">
+					<i class="icon icon-back">
+					</i>
+				</a>
+			</div>
+
+			<div class="center" id="navPedido3">
+				DADOS DE PAGAMENTO
+			</div>
+
+
+			<div class="right" id="navSimulacao" style="display:none">
+
+				<a href="#" data-panel="right" class="link">
+					<i class="fa fa-save">
+					</i>
+				</a>
+
+				
+			</div>
+		</div>
+
+
+	</div>
+	<!-- End: Navbar -->
+
+
+	<!-- Begin: Page Content -->
+  <div class="page-content">
+
+
+  	<div class="card">
+			<div class="card-content">
+				<div class="card-content-inner">
+					<div class="list-block media-list no-hairlines no-hairlines-between">
+						<ul class="products-list" id = "products-list" >							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-content">
+				<div class="list-block no-hairlines no-hairlines-between">
+					<ul class="price-summary">
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">Sub-total (<span class="product-count">0</span> Itens)</div>
+									<div class="item-after">R$ &nbsp; <span class="subtotal">0</span></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">Frete (c/ financeiro)</div>
+									<div class="item-after">R$ &nbsp; <span class="shipping-charges">0</span></div>
+								</div>
+							</div>
+						</li>
+						<li style="display: none;">
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">Desconto</div>
+									<div class="item-after">% (média) &nbsp; <span class="pedido-desconto">0</span></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title"><b>Total</b></div>
+									<div class="item-after"><b>R$ <span class="payable-amount">0</span></b></div>
+								</div>
+							</div>
+						</li>
+
+
+						<li id="li-pagamento-avista">
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title"><b>Forma de Pagamento</b></div><br>
+
+								</div>
+							</div>
+
+							<div style="padding: 0 0 15px 15px;" class="">
+								<b>
+									<span id="pedido-pagamento-avista">
+
+									</span>
+
+									<div style="display: none;" id="pedido-pagamento-parcela">
+											<div>DATA FIXA</div>
+									</div>
+
+								</b>
+							</div>
+						</li>
+
+
+
+						<li style="display: none;" id="li-pedido-vendedor">
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title"><b>Vendedor</b></div><br>
+
+								</div>
+							</div>
+
+									<div style="padding: 0 0 15px 15px;" class=""><b><span class="pedido-vendedor"></span></b></div>
+
+						</li>
+
+
+							<li style="display: none;" id="li-pedido-gestor">
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title"><b>Gestor</b></div><br>
+
+								</div>
+							</div>
+
+									<div style="padding: 0 0 15px 15px;" class=""><b><span class="pedido-gestor"></span></b></div>
+
+						</li>
+
+
+
+							<li style="display: none;" id="li-pedido-obs">
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title"><b>Observação</b></div><br>
+
+								</div>
+							</div>
+
+									<div style="padding: 0 0 15px 15px;" class=""><b><span class="pedido-obs"></span></b></div>
+
+						</li>
+
+					</ul>
+				</div>
+			</div>
+
+			<div style="display: none;" id="conteudo-historico">
+
+				
+				<h4  style=" padding: 0 0 0px 15px;">HISTÓRICO</h4>
+				<div id="itens-historico"></div>
+
+			<!-- 	<div style="margin:0 !important; " class="card">
+					<div class="card-content">
+						<div class="card-content-inner">
+
+							<div class="row">
+								
+									val.PedidosHistoricos.descricao
+							</div>
+
+							<div class="row">
+								
+									val.PedidosHistoricos.data
+							</div>
+
+							<div class="row">
+								
+									val.PedidosHistoricos.observacoes
+							</div>
+
+						</div>
+					</div>
+				</div> -->
+
+<!-- 
+				<div class="list-block no-hairlines no-hairlines-between">
+					<ul id="itens-historico" class="price-summary">
+
+
+					
+					</ul>
+
+				</div>
+ -->
+			</div>
+
+
+		</div>
+
+  	<div class="content-block" id="acoesNormal">
+
+		<div class="row center">
+			<div class="col-50">
+				<a href="#" class="back button button-fill button-raised color-green">Voltar</a>
+			</div>
+			<div class="col-50">
+				<a id = "btnProximoPasso" class="button button-fill button-raised color-green">Próximo</a>
+			</div>
+		</div>
+		
+  	</div>
+
+  	<div class="content-block" id="acoesSimulador" style="display:none">
+
+		<div class="row center">
+			<div class="col-50">
+				<a href = "pageindex.html" data-forceUrl="true" class="button button-fill button-raised color-green">Descartar</a>
+			</div>
+			<div class="col-50">
+				<a href="novo-pedido.html" class="button button-fill button-raised color-green">Vincular Cliente</a>
+			</div>
+		</div>
+		
+  	</div>
+
+
+
+<div class="popup popup-produtoinfo-2">
+
+		<div class="navbar" style="">
+			<div class="navbar-inner">
+				<div class="center">
+					<span id = "itemNome-1" > </span>
+					<input type = "hidden" value="" id = "itemId-1" />
+				</div>
+
+				<div class="right" style="" >
+					<a href="#" class="link close-popup">
+						<i class="icon icon-close"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-block">
+
+			<div class="row">
+				<img id = "itemFoto" style="margin:0 auto" src="img/connan-default.jpg">
+			</div>
+
+
+			<p id = "itemDescricao"></p>
+
+			<form class="list-block no-hairlines no-hairlines-between inputs-list">
+				<ul>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Preço unit. tabela - R$</div>
+								<!-- <span style="position: absolute;top: 32px;">R$</span> -->
+								<div class="item-input item-input-field not-empty-state">
+									<input type="hidden" id = "itemCarrinhoId-1" class="" value="0" min="0">
+									<input type="hidden" id = "itemCarrinhocodigo-1" class="" value="0" min="0">
+									<input type="number" id = "itemPrecoTabela-1" class="" disabled='disabled'  value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+					
+						<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Quantidade</div>
+								<div class="item-input item-input-field">
+									<input type="number" id = "itemQuantidade-1" class="" value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">% de desconto</div>
+								<div class="item-input item-input-field">
+									<input type="number" id = "itemPercentDesconto-1" step ="0.1" class="" value="0" max = "100" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+					
+
+						<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Preço unit. negociado (c/ financeiro) - R$</div>
+								
+								<div class="item-input item-input-field ">
+									<input type="number" id = "itemPrecoNego1-1" class="" value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+
+					
+				
+
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Valor de frete por saca (s/ financeiro) - R$</div>
+								<div class="item-input item-input-field ">
+									<input type="hidden" id = "pedidos-status" >
+									<input type="hidden" id = "itemPrecoFreteTotal-1" class="" value="0" min="0">
+									<input type="number" id = "itemPrecoFrete-1" class="" value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+				<li style="display: none;">
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Total negociado para venda (s/ frete) - R$</div>
+								<div class="item-input item-input-field">
+									<input type="number" id = "itemPrecoNegociado-1" class="" disabled='disabled' value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title floating-label">Total negociado para venda (com frete) - R$</div>
+								<div class="item-input item-input-field ">
+									<input type="number" id = "itemPrecoNegociadoComFrete-1" disabled='disabled' class="" value="0" min="0">
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					
+				</ul>
+			</form>
+
+
+			<a href="" id="btnAdicionaItem-1" class="button button-teal button-fill">Alterar</a>
+		</div>
+	</div>
+
+
+  		
+
+  	</div>
+	<!-- End: Page Content -->
+</div>
